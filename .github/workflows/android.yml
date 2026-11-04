@@ -18,10 +18,6 @@ jobs:
 
       - uses: android-actions/setup-android@v3
 
-      - name: Accept licenses and install Android SDK pieces
-        run: |
-          yes | sdkmanager --licenses > /dev/null || true
-          sdkmanager "platforms;android-35" "build-tools;35.0.0" > /dev/null || true
 
       - uses: gradle/actions/setup-gradle@v4
         with:
